@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FormRegister from "../_components/FormRegister";
 
 export default function Register() {
   return (
@@ -15,20 +16,20 @@ export default function Register() {
         src='/assets/images/code.png'
         alt='Logo'
         width={100}
-        height={80}
+        height={100}
         className='absolute bottom-5 left-10 hidden md:block'
       />
-      <div className='container mx-auto flex justify-end mt-20'>
-        <div className='flex flex-col p-4 m-10 gap-3'>
+      <div className='flex sm:container sm:justify-end sm:mx-auto'>
+        <div className='flex flex-col p-4 m-10 gap-3 w-full sm:w-96'>
           <p>
             Crie seu acesso
             <span className='text-cyan-600'>.</span>
           </p>
           <h1>Registrar</h1>
           <p>
-            Já tem uma conta? <Link href='/login'>Clique para entrar.</Link>
+            Já tem uma conta? <Link href='/'>Clique para entrar.</Link>
           </p>
-          {/* <FormLogin /> */}
+          <FormRegister />
         </div>
       </div>
     </main>

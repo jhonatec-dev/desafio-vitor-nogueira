@@ -16,10 +16,10 @@ export default function Home() {
         src='/assets/images/code.png'
         alt='Logo'
         width={100}
-        height={80}
+        height={100}
         className='absolute bottom-5 left-10 hidden md:block'
       />
-      <div className='container mx-auto flex justify-end mt-20'>
+      <div className='flex sm:container sm:justify-end sm:mx-auto'>
         <div className='flex flex-col p-4 m-10 gap-3'>
           <p>
             Entre com sua conta

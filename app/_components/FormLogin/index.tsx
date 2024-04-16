@@ -1,8 +1,10 @@
 "use client";
+import { getFromLocalStorage } from "@/app/_utils/localStorage";
 import Mail from "@mui/icons-material/Mail";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import validator from "validator";
@@ -21,11 +23,20 @@ export default function FormLogin() {
     handleSubmit,
     formState: { errors },
   } = methods;
+  const router = useRouter();
 
   const [showPassword, setShowPassword] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState<string | null>(null);
 
   function handleLogin(data: LoginFiels) {
     console.log(data);
+    const users = getFromLocalStorage("users") || [];
+    const user = users.find((user: any) => user.email === data.email);
+    if (!user || user.password !== data.password) {
+      setErrorMessage("E-mail ou senha inválidos");
+      return;
+    }
+    router.push("/home");
   }
 
   return (
@@ -64,10 +75,13 @@ export default function FormLogin() {
             </button>
           }
         />
-        {errors.password && <span>{errors.password?.message}</span>}
+        {errors.password && <ErrorLabel>{errors.password?.message}</ErrorLabel>}
+        {errorMessage && <ErrorLabel>{errorMessage}</ErrorLabel>}
         <div className='flex justify-between items-center'>
           <Link href={"/forgot-password"}>Esqueci minha senha</Link>
-          <BaseButton type='submit' className="w-1/3">Entrar</BaseButton>
+          <BaseButton type='submit' className='w-1/3'>
+            Entrar
+          </BaseButton>
         </div>
       </FormProvider>
     </form>
