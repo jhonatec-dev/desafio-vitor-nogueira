@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import React from "react";
 import "./globals.css";
 
@@ -18,8 +19,22 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
+        <Image
+          src='/assets/images/logo.png'
+          alt='Logo'
+          width={200}
+          height={150}
+          className='absolute top-5 left-1/3 md:left-10 sm:translate-x-0'
+        />
+        <Image
+          src='/assets/images/code.png'
+          alt='Logo'
+          width={100}
+          height={100}
+          className='absolute bottom-5 left-10 hidden md:block'
+        />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
