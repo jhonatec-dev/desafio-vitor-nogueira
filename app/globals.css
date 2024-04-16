@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-image: url(/assets/images/background.jpg);
+  background-size: cover;
+}
+
+main {
+  @apply h-svh text-white flex items-center bg-gradient-to-t from-60% sm:bg-gradient-to-l from-stone-900 sm:from-70% md:from-60% lg:from-50% xl:from-40% 2xl:from-45% to-transparent;
+}
+
 h1 {
   @apply text-4xl font-bold;
 }
@@ -45,4 +54,3 @@ input {
 .input-container:has(input:focus) label {
   @apply text-cyan-400;
 }
-

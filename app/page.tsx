@@ -1,20 +1,30 @@
+import Image from "next/image";
 import Link from "next/link";
 import FormLogin from "./_components/FormLogin";
 
 export default function Home() {
   return (
-    <main className='bg-stone-800 w-full h-svh text-white flex flex-col items-end justify-center'>
-      <div className='flex flex-col p-4 m-10 gap-2'>
-        <p>
-          Entre com sua conta para acessar os novos recursos
-          <span className='text-cyan-600'>.</span>
-        </p>
-        <h1>Login</h1>
-        <p>
-          Ainda não tem uma conta?{" "}
-          <Link href='/register˝'>Clique para criar uma.</Link>
-        </p>
-        <FormLogin />
+    <main>
+      <Image
+        src='/assets/images/logo.png'
+        alt='Logo'
+        width={200}
+        height={150}
+        className='absolute top-5 left-1/3 md:left-10 sm:translate-x-0'
+      />
+      <div className='container mx-auto flex justify-end mt-20'>
+        <div className='flex flex-col p-4 m-10 gap-3'>
+          <p>
+            Entre com sua conta
+            <span className='text-cyan-600'>.</span>
+          </p>
+          <h1>Login</h1>
+          <p>
+            Ainda não tem uma conta?{" "}
+            <Link href='/register'>Clique para criar uma.</Link>
+          </p>
+          <FormLogin />
+        </div>
       </div>
     </main>
   );
