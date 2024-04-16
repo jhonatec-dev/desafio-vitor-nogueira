@@ -143,7 +143,7 @@ export default function FormRegister() {
         )}
 
         <div className='flex justify-end items-center'>
-          <BaseButton type='submit'>Criar conta</BaseButton>
+          <BaseButton>Criar conta</BaseButton>
         </div>
       </FormProvider>
     </form>

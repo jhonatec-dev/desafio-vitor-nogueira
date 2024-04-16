@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import FormRegister from "../_components/FormRegister";
-import SocialButtons from "../_components/SocialButtons";
 
 export default function Register() {
   return (
@@ -25,7 +24,7 @@ export default function Register() {
           </p>
           <FormRegister />
           <h6 className="mt-8">Ou registre usando suas redes sociais</h6>
-          <SocialButtons />
+          {/* <SocialButtons /> */}
         </div>
       </div>
     </main>

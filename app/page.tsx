@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import FormLogin from "./_components/FormLogin";
-import SocialButtons from "./_components/SocialButtons";
 
 export default function Home() {
   return (
@@ -26,7 +25,7 @@ export default function Home() {
           </p>
           <FormLogin />
           <h6 className="mt-8">Ou entre usando suas redes sociais</h6>
-          <SocialButtons />
+          {/* <SocialButtons /> */}
         </div>
       </div>
     </main>

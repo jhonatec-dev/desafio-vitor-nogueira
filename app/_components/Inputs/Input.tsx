@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function Input(props: Props) {
-  const { fullWidth, endAdornment, label, registerAs, registerOptions } = props;
+  const { fullWidth, endAdornment, label, registerAs, registerOptions, ...otherProps } = props;
   const {
     register,
     formState: { errors },
@@ -29,7 +29,7 @@ export default function Input(props: Props) {
         <input
           className='bg-transparent px-2'
           {...register(registerAs, registerOptions)}
-          {...props}
+          {...otherProps}
         />
       </div>
       {endAdornment && <div className='ml-2'>{endAdornment}</div>}

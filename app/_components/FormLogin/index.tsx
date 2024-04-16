@@ -79,9 +79,7 @@ export default function FormLogin() {
         {errorMessage && <ErrorLabel>{errorMessage}</ErrorLabel>}
         <div className='flex justify-between items-center'>
           <Link href={"/forgot-password"}>Esqueci minha senha</Link>
-          <BaseButton type='submit' className='w-1/3'>
-            Entrar
-          </BaseButton>
+          <BaseButton className='w-1/3'>Entrar</BaseButton>
         </div>
       </FormProvider>
     </form>
