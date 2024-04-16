@@ -1,6 +1,4 @@
-import Apple from "@mui/icons-material/Apple";
-import Facebook from "@mui/icons-material/Facebook";
-import Google from "@mui/icons-material/Google";
+import { Apple, Facebook, Google } from "@mui/icons-material";
 import BaseButton from "../Buttons/Base";
 
 export default function SocialButtons() {
