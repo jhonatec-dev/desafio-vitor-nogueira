@@ -11,18 +11,23 @@ interface Props {
 
 export default function Input(props: Props) {
   const { fullWidth, endAdornment, label, registerAs, registerOptions } = props;
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   // console.log('otherPRops \n', otherProps)
   return (
     <div
-      className={`input-container flex items-center transition ${
+      className={`input-container ${
+        errors[registerAs] ? "error" : ""
+      } flex items-center transition  ${
         fullWidth ? "w-full" : ""
-      } bg-stone-600 rounded-2xl py-2 px-4`}
+      } bg-stone-600 rounded-2xl py-1 px-4`}
     >
       <div className='flex flex-col flex-grow'>
         <label className='text-xs text-gray-300 ml-2'>{label}</label>
         <input
-          className='bg-transparent px-2 py-1'
+          className='bg-transparent px-2'
           {...register(registerAs, registerOptions)}
           {...props}
         />

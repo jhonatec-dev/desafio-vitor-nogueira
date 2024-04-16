@@ -20,13 +20,6 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Image
-          src='/assets/images/logo.png'
-          alt='Logo'
-          width={200}
-          height={150}
-          className='absolute top-5 left-1/3 md:left-10 sm:translate-x-0'
-        />
-        <Image
           src='/assets/images/code.png'
           alt='Logo'
           width={100}

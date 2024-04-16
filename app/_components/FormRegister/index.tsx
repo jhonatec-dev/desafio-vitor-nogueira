@@ -73,7 +73,7 @@ export default function FormRegister() {
     );
 
   return (
-    <form onSubmit={handleSubmit(handleLogin)} className='flex flex-col gap-2'>
+    <form onSubmit={handleSubmit(handleLogin)} className='flex flex-col gap-2 w-full'>
       <FormProvider {...methods}>
         <Input
           label='Nome'
