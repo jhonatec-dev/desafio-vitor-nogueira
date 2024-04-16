@@ -12,6 +12,13 @@ export default function Home() {
         height={150}
         className='absolute top-5 left-1/3 md:left-10 sm:translate-x-0'
       />
+      <Image
+        src='/assets/images/code.png'
+        alt='Logo'
+        width={100}
+        height={80}
+        className='absolute bottom-5 left-10 hidden md:block'
+      />
       <div className='container mx-auto flex justify-end mt-20'>
         <div className='flex flex-col p-4 m-10 gap-3'>
           <p>
